@@ -1,0 +1,13 @@
+{
+	"name": "haxe.macro.Metas",
+	"tags": [
+		"haxe", "macro", "meta", "metadata"
+	],
+	"classPath": "src",
+	"description": "Enum Abstract of compiler metadatas.",
+	"contributors": [
+		"skial"
+	],
+	"version": "0.0.1",
+	"url": "https://github.com/skial/haxe.macro.Metas"
+}
