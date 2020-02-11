@@ -123,7 +123,13 @@ class Entry {
             if (meta.internal != null && meta.internal) field.doc += '\n- - -\nFor internal compiler use only.';
             if (meta.platforms != null) field.doc += '\n- - -\nPlatform${meta.platforms.length == 0 ? 's' :''}: ${meta.platforms.join(' | ')}';
             if (meta.targets != null) field.doc += '\n- - -\nApplies to: ${meta.targets.map( s -> s.substr(1) ).join(' | ')}';
-            if (meta.params != null) for (p in meta.params) field.doc += '\n@param ${p}';
+            if (meta.params != null) {
+                if (meta.params.length > 1) {
+                    for (i in 0...meta.params.length) field.doc += '\n@param arg${i} ${meta.params[i]}';
+                } else {
+                    field.doc += '\n@param arg ${meta.params[0]}';
+                }
+            }
             if (meta.links != null) for (l in meta.links) field.doc += '\n@see $l';
 
             //trace( printer.printField( field ) );

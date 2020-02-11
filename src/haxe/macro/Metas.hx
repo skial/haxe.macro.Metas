@@ -26,7 +26,7 @@ package haxe.macro;
 		Forces private access to package, type or field.
 		- - -
 		Applies to: Class | ClassField
-		@param Target path
+		@param arg Target path
 		@see https://haxe.org/manual/lf-access-control.html
 	**/
 	public var Access = ":access";
@@ -44,7 +44,7 @@ package haxe.macro;
 		`@:allow`
 		- - -
 		Allows private access from package, type or field.
-		@param Target path
+		@param arg Target path
 		@see https://haxe.org/manual/lf-access-control.html
 	**/
 	public var Allow = ":allow";
@@ -95,7 +95,7 @@ package haxe.macro;
 		Extends `@:build` metadata to all extending and implementing classes.
 		- - -
 		Applies to: Class
-		@param Build macro call
+		@param arg Build macro call
 		@see https://haxe.org/manual/macro-auto-build.html
 	**/
 	public var AutoBuild = ":autoBuild";
@@ -117,7 +117,7 @@ package haxe.macro;
 		Platform: flash
 		- - -
 		Applies to: Class
-		@param Bitmap file path
+		@param arg Bitmap file path
 		@see https://haxe.org/manual/target-flash-resources.html
 	**/
 	public var Bitmap = ":bitmap";
@@ -137,7 +137,7 @@ package haxe.macro;
 		Builds a class or enum from a macro.
 		- - -
 		Applies to: Class | Enum
-		@param Build macro call
+		@param arg Build macro call
 		@see https://haxe.org/manual/macro-type-building.html
 	**/
 	public var Build = ":build";
@@ -404,7 +404,7 @@ package haxe.macro;
 		Includes the class or field in Haxe exports (default name is the classpath).
 		- - -
 		Platform: js | lua
-		@param name
+		@param arg name
 		@see https://haxe.org/manual/target-javascript-expose.html
 	**/
 	public var Expose = ":expose";
@@ -424,7 +424,7 @@ package haxe.macro;
 		Platform: flash
 		- - -
 		Applies to: Class
-		@param File path
+		@param arg File path
 		@see https://haxe.org/manual/target-flash-resources.html
 	**/
 	public var File = ":file";
@@ -479,8 +479,8 @@ package haxe.macro;
 		Embeds the given TrueType font into the class (must extend `flash.text.Font`).
 		- - -
 		Applies to: Class
-		@param TTF path
-		@param Range String
+		@param arg0 TTF path
+		@param arg1 Range String
 		@see https://haxe.org/manual/target-flash-resources.html
 	**/
 	public var Font = ":font";
@@ -498,7 +498,7 @@ package haxe.macro;
 		Forwards field access to underlying type.
 		- - -
 		Applies to: Abstract
-		@param List of field names
+		@param arg List of field names
 		@see https://haxe.org/manual/types-abstract-forward.html
 	**/
 	public var Forward = ":forward";
@@ -508,7 +508,7 @@ package haxe.macro;
 		Forwards static field access to underlying type.
 		- - -
 		Applies to: Abstract
-		@param List of field names
+		@param arg List of field names
 		@see https://haxe.org/manual/types-abstract-forward.html
 	**/
 	public var ForwardStatics = ":forwardStatics";
@@ -577,7 +577,7 @@ package haxe.macro;
 		Platform: flash
 		- - -
 		Applies to: ClassField
-		@param Class field name
+		@param arg Class field name
 	**/
 	public var Getter = ":getter";
 	/**
@@ -665,7 +665,7 @@ package haxe.macro;
 		Causes a field to be kept by DCE if the given feature is part of the compilation.
 		- - -
 		Applies to: ClassField
-		@param Feature name
+		@param arg Feature name
 		@see https://haxe.org/manual/cr-dce.html
 	**/
 	public var IfFeature = ":ifFeature";
@@ -769,8 +769,8 @@ package haxe.macro;
 		Platform: java
 		- - -
 		Applies to: Class | Enum
-		@param Output type package
-		@param Output type name
+		@param arg0 Output type package
+		@param arg1 Output type name
 	**/
 	public var JavaCanonical = ":javaCanonical";
 	/**
@@ -913,7 +913,7 @@ package haxe.macro;
 		Specifies that an abstract chooses its this-type from its `@:to` functions.
 		- - -
 		Applies to: Abstract
-		@param Relevant type parameters
+		@param arg Relevant type parameters
 	**/
 	public var MultiType = ":multiType";
 	/**
@@ -922,7 +922,7 @@ package haxe.macro;
 		Rewrites the path of a class or enum during generation.
 		- - -
 		Applies to: Class | Enum
-		@param Output type path
+		@param arg Output type path
 		@see https://haxe.org/manual/lf-externs.html
 	**/
 	public var Native = ":native";
@@ -1088,7 +1088,7 @@ package haxe.macro;
 		Enables null safety for classes or fields. Disables null safety for classes, fields or expressions if provided with `Off` as an argument.
 		- - -
 		Applies to: Class | ClassField | Expr
-		@param Off | Loose | Strict | StrictThreaded
+		@param arg Off | Loose | Strict | StrictThreaded
 		@see https://haxe.org/manual/cr-null-safety.html
 	**/
 	public var NullSafety = ":nullSafety";
@@ -1116,7 +1116,7 @@ package haxe.macro;
 		Declares an abstract field as being an operator overload.
 		- - -
 		Applies to: AbstractField
-		@param The operation
+		@param arg The operation
 		@see https://haxe.org/manual/types-abstract-operator-overloading.html
 	**/
 	public var Op = ":op";
@@ -1135,7 +1135,7 @@ package haxe.macro;
 		Allows the field to be called with different argument types.
 		- - -
 		Applies to: ClassField
-		@param Function specification (no expression)
+		@param arg Function specification (no expression)
 		@see https://haxe.org/manual/target-javascript-external-libraries.html
 	**/
 	public var Overload = ":overload";
@@ -1195,7 +1195,7 @@ package haxe.macro;
 		Sets the position of a reified expression.
 		- - -
 		Applies to: Expr
-		@param Position
+		@param arg Position
 		@see https://haxe.org/manual/macro-reification.html
 	**/
 	public var Pos = ":pos";
@@ -1295,7 +1295,7 @@ package haxe.macro;
 		Allows access to a field only if the specified compiler flag is set.
 		- - -
 		Applies to: ClassField
-		@param Compiler flag to check
+		@param arg Compiler flag to check
 		@see https://haxe.org/manual/lf-condition-compilation.html
 	**/
 	public var Require = ":require";
@@ -1366,7 +1366,7 @@ package haxe.macro;
 		The native semantics of the type.
 		- - -
 		Applies to: Class | Typedef | Abstract
-		@param value | reference | variable
+		@param arg value | reference | variable
 	**/
 	public var Semantics = ":semantics";
 	/**
@@ -1377,7 +1377,7 @@ package haxe.macro;
 		Platform: flash
 		- - -
 		Applies to: ClassField
-		@param Class field name
+		@param arg Class field name
 	**/
 	public var Setter = ":setter";
 	/**
@@ -1410,7 +1410,7 @@ package haxe.macro;
 		Platform: flash
 		- - -
 		Applies to: Class
-		@param File path
+		@param arg File path
 		@see https://haxe.org/manual/target-flash-resources.html
 	**/
 	public var Sound = ":sound";
@@ -1518,7 +1518,7 @@ package haxe.macro;
 		Platform: java
 		- - -
 		Applies to: ClassField
-		@param Type as String
+		@param arg Type as String
 	**/
 	public var Throws = ":throws";
 	/**
