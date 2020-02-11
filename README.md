@@ -1,11 +1,11 @@
-# haxe.macro.Metas
+# Metas
 
 
-An `enum abstract` built off the Haxe generated file [`meta.json`](https://raw.githubusercontent.com/HaxeFoundation/haxe/development/src-json/meta.json).
+Two `enum abstract`'s built off the Haxe generated file [`meta.json`](https://raw.githubusercontent.com/HaxeFoundation/haxe/development/src-json/meta.json).
 
 ## Install
 
-Run `lix install gh:skial/haxe.macro.Metas`.
+Run `lix install gh:skial/Metas`.
 
 ## Overview
 
@@ -52,6 +52,15 @@ enum abstract Metas(String) from String to String {
         For internal compiler use only.
     **/
     public var TailRecursion = ":tailRecursion";
+}
+```
+
+```Haxe
+enum abstract TypedMetas(String) from Metas {
+    public var Remove:TypedMetas<Void, ClassType> = Metas.Remove;
+    public var SelfCall:TypedMetas<Void, ClassField> = Metas.SelfCall;
+    public var Semantics:TypedMetas<Expr, BaseType> = Metas.Semantics;
+    public var TailRecursion:TypedMetas<Void, BaseType> = Metas.TailRecursion;
 }
 ```
 
