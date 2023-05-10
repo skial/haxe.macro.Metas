@@ -26,7 +26,7 @@ enum abstract Metas(String) from String to String {
         @param arg Off | Loose | Strict | StrictThreaded
         @see https://haxe.org/manual/cr-null-safety.html
     **/
-	public var NullSafety : haxe.macro.TypedMetas<haxe.macro.Expr, Any> = Metas.NullSafety;
+	public var NullSafety = ":nullSafety";
 
     /**
         `@:semantics`
@@ -48,7 +48,7 @@ enum abstract Metas(String) from String to String {
 ```Haxe
 enum abstract TypedMetas<Arg, TargetHint>(String) from Metas {
     public var Remove:TypedMetas<Void, ClassType> = Metas.Remove;
-    public var SelfCall:TypedMetas<Void, ClassField> = Metas.SelfCall;
+	public var NullSafety:TypedMetas<Expr, Any> = Metas.NullSafety;
     public var Semantics:TypedMetas<Expr, BaseType> = Metas.Semantics;
     public var TailRecursion:TypedMetas<Void, BaseType> = Metas.TailRecursion;
 }
