@@ -48,7 +48,7 @@ enum abstract Metas(String) from String to String {
 ```Haxe
 enum abstract TypedMetas<Arg, TargetHint>(String) from Metas {
     public var Remove:TypedMetas<Void, ClassType> = Metas.Remove;
-	public var NullSafety:TypedMetas<Expr, Any> = Metas.NullSafety;
+    public var NullSafety:TypedMetas<Expr, Any> = Metas.NullSafety;
     public var Semantics:TypedMetas<Expr, BaseType> = Metas.Semantics;
     public var TailRecursion:TypedMetas<Void, BaseType> = Metas.TailRecursion;
 }
