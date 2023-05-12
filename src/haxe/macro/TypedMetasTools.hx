@@ -41,3 +41,9 @@ class InlinedArrayAny {
         return { expr:EMeta({name:tm, params:params, pos:pos}, expr), pos: pos };
     }
 }
+
+class Empty {
+    public static inline function asMetadataEntry<T>(tm:TypedMetas<Any, T>, ?pos:Position):MetadataEntry {
+        return { name: tm, params: [], pos: pos == null ? Context.currentPos() : pos };
+    }
+}
