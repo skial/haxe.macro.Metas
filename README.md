@@ -26,7 +26,7 @@ enum abstract Metas(String) from String to String {
         @param arg Off | Loose | Strict | StrictThreaded
         @see https://haxe.org/manual/cr-null-safety.html
     **/
-	public var NullSafety = ":nullSafety";
+    public var NullSafety = ":nullSafety";
 
     /**
         `@:semantics`
