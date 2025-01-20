@@ -12,12 +12,6 @@ package haxe.macro;
 	**/
 	public var Abi = ":abi";
 	/**
-		`@:abstract`
-		Sets the underlying class implementation as `abstract`.
-		Platform: java | cs
-	**/
-	public var Abstract = ":abstract";
-	/**
 		`@:access`
 		Forces private access to package, type or field.
 		Applies to: Class | ClassField
@@ -46,9 +40,10 @@ package haxe.macro;
 	public var Analyzer = ":analyzer";
 	/**
 		`@:annotation`
-		Annotation (`@interface`) definitions on `--java-lib` imports will be annotated with this metadata. Has no effect on types compiled by Haxe.
-		Platform: java
+		Marks a class as a Java annotation
+		Platform: jvm
 		Applies to: Class
+		@param arg Retention policy
 	**/
 	public var Annotation = ":annotation";
 	/**
@@ -58,20 +53,6 @@ package haxe.macro;
 		@see https://haxe.org/manual/types-abstract-array-access.html
 	**/
 	public var ArrayAccess = ":arrayAccess";
-	/**
-		`@:cs.assemblyMeta`
-		Used to declare a native C# assembly attribute
-		Platform: cs
-		Applies to: Class
-	**/
-	public var AssemblyMeta = ":cs.assemblyMeta";
-	/**
-		`@:cs.assemblyStrict`
-		Used to declare a native C# assembly attribute; is type checked
-		Platform: cs
-		Applies to: Class
-	**/
-	public var AssemblyStrict = ":cs.assemblyStrict";
 	/**
 		`@:ast`
 		Internally used to pass the AST source into the typed AST.
@@ -109,13 +90,6 @@ package haxe.macro;
 	**/
 	public var Bitmap = ":bitmap";
 	/**
-		`@:bridgeProperties`
-		Creates native property bridges for all Haxe properties in this class.
-		Platform: cs
-		Applies to: Class
-	**/
-	public var BridgeProperties = ":bridgeProperties";
-	/**
 		`@:build`
 		Builds a class, enum, or abstract from a macro.
 		Applies to: Class | Enum | Abstract
@@ -142,21 +116,6 @@ package haxe.macro;
 		Applies to: Abstract
 	**/
 	public var Callable = ":callable";
-	/**
-		`@:class`
-		Used internally to annotate an enum that will be generated as a class.
-		For internal compiler use only.
-		Platform: java | cs
-		Applies to: Enum
-	**/
-	public var Class = ":class";
-	/**
-		`@:classCode`
-		Used to inject platform-native code into a class.
-		Platform: java | cs
-		Applies to: Class
-	**/
-	public var ClassCode = ":classCode";
 	/**
 		`@:commutative`
 		Declares an abstract operator as commutative.
@@ -207,21 +166,6 @@ package haxe.macro;
 	**/
 	public var CppNamespaceCode = ":cppNamespaceCode";
 	/**
-		`@:csNative`
-		Automatically added by `--net-lib` on classes generated from .NET DLL files.
-		For internal compiler use only.
-		Platform: cs
-		Applies to: Class | Enum
-	**/
-	public var CsNative = ":csNative";
-	/**
-		`@:cs.using`
-		Add using directives to your module
-		Platform: cs
-		Applies to: Class
-	**/
-	public var CsUsing = ":cs.using";
-	/**
 		`@:dce`
 		Forces dead code elimination even when `--dce full` is not specified.
 		Applies to: Class | Enum
@@ -248,13 +192,6 @@ package haxe.macro;
 	**/
 	public var DefParam = ":defParam";
 	/**
-		`@:delegate`
-		Automatically added by `--net-lib` on delegates.
-		Platform: cs
-		Applies to: Abstract
-	**/
-	public var Delegate = ":delegate";
-	/**
 		`@:depend`
 		Platform: cpp
 	**/
@@ -277,14 +214,6 @@ package haxe.macro;
 	**/
 	public var DisplayOverride = ":?display.override";
 	/**
-		`@:dynamicObject`
-		Used internally to identify the Dynamic Object implementation.
-		For internal compiler use only.
-		Platform: java | cs
-		Applies to: Class
-	**/
-	public var DynamicObject = ":dynamicObject";
-	/**
 		`@:eager`
 		Forces typedefs to be followed early.
 		Applies to: Typedef
@@ -297,20 +226,6 @@ package haxe.macro;
 		@see https://haxe.org/manual/types-abstract-enum.html
 	**/
 	public var Enum = ":enum";
-	/**
-		`@:enumConstructorParam`
-		Used internally to annotate GADT type parameters.
-		For internal compiler use only.
-		Applies to: Class
-	**/
-	public var EnumConstructorParam = ":enumConstructorParam";
-	/**
-		`@:event`
-		Automatically added by `--net-lib` on events. Has no effect on types compiled by Haxe.
-		Platform: cs
-		Applies to: ClassField
-	**/
-	public var Event = ":event";
 	/**
 		`@:exhaustive`
 		Used internally to mark that a switch is exhaustive.
@@ -425,9 +340,15 @@ package haxe.macro;
 	**/
 	public var From = ":from";
 	/**
+		`@:functionalInterface`
+		Mark an interface as a functional interface
+		Platform: jvm
+	**/
+	public var FunctionalInterface = ":functionalInterface";
+	/**
 		`@:functionCode`
 		Used to inject platform-native code into a function.
-		Platform: cpp | java | cs
+		Platform: cpp
 	**/
 	public var FunctionCode = ":functionCode";
 	/**
@@ -481,14 +402,6 @@ package haxe.macro;
 	**/
 	public var HasUntyped = ":has_untyped";
 	/**
-		`@:haxeGeneric`
-		Used internally to annotate non-native generic classes.
-		For internal compiler use only.
-		Platform: cs
-		Applies to: Class | Enum
-	**/
-	public var HaxeGeneric = ":haxeGeneric";
-	/**
 		`@:headerClassCode`
 		Code to be injected into the generated class, in the header.
 		Platform: cpp
@@ -519,6 +432,12 @@ package haxe.macro;
 	**/
 	public var HlNative = ":hlNative";
 	/**
+		`@:hxb.id`
+		Internally used by hxb
+		For internal compiler use only.
+	**/
+	public var HxbId = ":hxb.id";
+	/**
 		`@:hx.completion`
 		Internally used for completion
 		For internal compiler use only.
@@ -527,7 +446,6 @@ package haxe.macro;
 	/**
 		`@:hxGen`
 		Annotates that an extern class was generated by Haxe.
-		Platform: java | cs
 		Applies to: Class | Enum
 	**/
 	public var HxGen = ":hxGen";
@@ -568,7 +486,7 @@ package haxe.macro;
 	/**
 		`@:inheritDoc`
 		Append documentation from a parent field or class (if used without an argument) or from a specified class or field (if used like @:inheritDoc(pack.Some.field)).
-		Applies to: Class | Class | Enum | Abstract | AnyField
+		Applies to: Class | Enum | Abstract | AnyField
 	**/
 	public var InheritDoc = ":inheritDoc";
 	/**
@@ -597,13 +515,6 @@ package haxe.macro;
 	**/
 	public var InlineObject = ":inlineObject";
 	/**
-		`@:internal`
-		Generates the annotated field/class with 'internal' access.
-		Platform: java | cs
-		Applies to: Class | Enum | ClassField
-	**/
-	public var Internal = ":internal";
-	/**
 		`@:isVar`
 		Forces a physical field to be generated for properties that otherwise would not require one.
 		Applies to: ClassField
@@ -611,34 +522,16 @@ package haxe.macro;
 	**/
 	public var IsVar = ":isVar";
 	/**
-		`@:javaCanonical`
-		Used by the Java target to annotate the canonical path of the type.
-		Platform: java
-		Applies to: Class | Enum
-		@param arg0 Output type package
-		@param arg1 Output type name
-	**/
-	public var JavaCanonical = ":javaCanonical";
-	/**
 		`@:java.default`
 		Equivalent to the default modifier of the Java language
-		Platform: java
+		Platform: jvm
 		Applies to: ClassField
-		@param arg null
 	**/
 	public var JavaDefault = ":java.default";
 	/**
-		`@:javaNative`
-		Automatically added by `--java-lib` on classes generated from JAR/class files.
-		For internal compiler use only.
-		Platform: java
-		Applies to: Class | Enum
-	**/
-	public var JavaNative = ":javaNative";
-	/**
 		`@:jvm.synthetic`
 		Mark generated class, field or method as synthetic
-		Platform: java
+		Platform: jvm
 		Applies to: Class | Enum | AnyField
 	**/
 	public var JvmSynthetic = ":jvm.synthetic";
@@ -687,7 +580,7 @@ package haxe.macro;
 		`@:libType`
 		Used by `--net-lib` and `--java-lib` to mark a class that should not be checked (overrides, interfaces, etc) by the type loader.
 		For internal compiler use only.
-		Platform: java | cs
+		Platform: jvm
 		Applies to: Class
 	**/
 	public var LibType = ":libType";
@@ -714,12 +607,6 @@ package haxe.macro;
 		@deprecated
 	**/
 	public var Macro = ":macro";
-	/**
-		`@:maybeUsed`
-		Internally used by DCE to mark fields that might be kept.
-		For internal compiler use only.
-	**/
-	public var MaybeUsed = ":maybeUsed";
 	/**
 		`@:mergeBlock`
 		Merge the annotated block into the current scope.
@@ -752,32 +639,17 @@ package haxe.macro;
 	/**
 		`@:java.native`
 		Annotates that a function has implementation in native code through JNI.
-		Platform: java
+		Platform: jvm
 		Applies to: ClassField
 	**/
 	public var NativeJni = ":java.native";
 	/**
-		`@:nativeChildren`
-		Annotates that all children from a type should be treated as if it were an extern definition - platform native.
-		Platform: java | cs
-		Applies to: Class
-	**/
-	public var NativeChildren = ":nativeChildren";
-	/**
 		`@:nativeGen`
 		Annotates that a type should be treated as if it were an extern definition - platform native.
-		Platform: java | cs | python
+		Platform: python
 		Applies to: Class | Enum
 	**/
 	public var NativeGen = ":nativeGen";
-	/**
-		`@:nativeGeneric`
-		Used internally to annotate native generic classes.
-		For internal compiler use only.
-		Platform: cs
-		Applies to: Class | Enum
-	**/
-	public var NativeGeneric = ":nativeGeneric";
 	/**
 		`@:nativeProperty`
 		Use native properties which will execute even with dynamic usage.
@@ -981,7 +853,7 @@ package haxe.macro;
 	/**
 		`@:private`
 		Marks a class field as being private.
-		Platform: cs
+		Platform: jvm
 		Applies to: ClassField
 	**/
 	public var Private = ":private";
@@ -994,30 +866,16 @@ package haxe.macro;
 	/**
 		`@:protected`
 		Marks a class field as being protected.
-		Platform: cs | java | flash
+		Platform: jvm | flash
 		Applies to: ClassField
 	**/
 	public var Protected = ":protected";
-	/**
-		`@:property`
-		Marks a field to be compiled as a native C# property.
-		Platform: cs
-		Applies to: ClassField
-	**/
-	public var Property = ":property";
 	/**
 		`@:pure`
 		Marks a class field, class or expression as pure (side-effect free).
 		Applies to: Class | ClassField | Expr
 	**/
 	public var Pure = ":pure";
-	/**
-		`@:readOnly`
-		Generates a field with the `readonly` native keyword.
-		Platform: cs
-		Applies to: ClassField
-	**/
-	public var ReadOnly = ":readOnly";
 	/**
 		`@:realPath`
 		Internally used on `@:native` types to retain original path information.
@@ -1093,21 +951,6 @@ package haxe.macro;
 	**/
 	public var Setter = ":setter";
 	/**
-		`@:skipCtor`
-		Used internally to generate a constructor as if it were a native type (no `__hx_ctor`).
-		For internal compiler use only.
-		Platform: java | cs
-	**/
-	public var SkipCtor = ":skipCtor";
-	/**
-		`@:skipReflection`
-		Used internally to annotate a field that shouldn't have its reflection data generated.
-		For internal compiler use only.
-		Platform: java | cs
-		Applies to: ClassField
-	**/
-	public var SkipReflection = ":skipReflection";
-	/**
 		`@:sound`
 		Includes a given .wav or .mp3 file into the target SWF and associates it with the class (must extend `flash.media.Sound`).
 		Platform: flash
@@ -1142,14 +985,14 @@ package haxe.macro;
 	public var StoredTypedExpr = ":storedTypedExpr";
 	/**
 		`@:strict`
-		Used to declare a native C# attribute or a native Java metadata; is type checked.
-		Platform: java | cs
+		Used to declare a native Java metadata; is type checked.
+		Platform: jvm
 	**/
 	public var Strict = ":strict";
 	/**
 		`@:struct`
 		Marks a class definition as a struct.
-		Platform: cs | hl
+		Platform: hl
 		Applies to: Class
 	**/
 	public var Struct = ":struct";
@@ -1167,13 +1010,6 @@ package haxe.macro;
 	**/
 	public var StructInit = ":structInit";
 	/**
-		`@:suppressWarnings`
-		Adds a `SuppressWarnings` annotation for the generated Java class.
-		Platform: java
-		Applies to: Class
-	**/
-	public var SuppressWarnings = ":suppressWarnings";
-	/**
 		`@:tailRecursion`
 		Internally used for tail recursion elimination.
 		For internal compiler use only.
@@ -1186,14 +1022,6 @@ package haxe.macro;
 		Applies to: ClassField
 	**/
 	public var TemplatedCall = ":templatedCall";
-	/**
-		`@:throws`
-		Adds a `throws` declaration to the generated function.
-		Platform: java
-		Applies to: ClassField
-		@param arg Type as String
-	**/
-	public var Throws = ":throws";
 	/**
 		`@:this`
 		Internally used to pass a `this` expression to macros.
@@ -1215,13 +1043,6 @@ package haxe.macro;
 	**/
 	public var ToString = ":toString";
 	/**
-		`@:transient`
-		Adds the `transient` flag to the class field.
-		Platform: java
-		Applies to: ClassField
-	**/
-	public var Transient = ":transient";
-	/**
 		`@:transitive`
 		Allows transitive casts with an abstract.
 		Applies to: Abstract
@@ -1235,7 +1056,7 @@ package haxe.macro;
 	public var ValueUsed = ":valueUsed";
 	/**
 		`@:volatile`
-		Platform: java | cs
+		Platform: jvm
 	**/
 	public var Volatile = ":volatile";
 	/**
@@ -1249,13 +1070,6 @@ package haxe.macro;
 		Platform: cpp
 	**/
 	public var Unreflective = ":unreflective";
-	/**
-		`@:unsafe`
-		Declares a class, or a method with the C#'s `unsafe` flag.
-		Platform: cs
-		Applies to: Class | ClassField
-	**/
-	public var Unsafe = ":unsafe";
 	/**
 		`@:used`
 		Internally used by DCE to mark a class or field as used.

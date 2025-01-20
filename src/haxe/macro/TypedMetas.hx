@@ -19,35 +19,35 @@ package haxe.macro;
 	}
 	@:op(a())
 	static function buildwithConstStringExpr<T>(self:TypedMetas<haxe.macro.Expr, T>, value:String, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 9561, max : 9566 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 9454, max : 9459 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstIntExpr<T>(self:TypedMetas<haxe.macro.Expr, T>, value:Int, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 9865, max : 9870 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 9758, max : 9763 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstFloatExpr<T>(self:TypedMetas<haxe.macro.Expr, T>, value:Float, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 10173, max : 10178 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 10066, max : 10071 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstBoolExpr<T>(self:TypedMetas<haxe.macro.Expr, T>, value:Bool, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 10479, max : 10484 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : [(haxe.macro.Context.makeExpr(value, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 10372, max : 10377 })) : haxe.macro.Expr)], pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstStringArrayExpr<T>(self:TypedMetas<Array<haxe.macro.Expr>, T>, values:Array<String>, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 10821, max : 10822 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 10714, max : 10715 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstIntArrayExpr<T>(self:TypedMetas<Array<haxe.macro.Expr>, T>, values:Array<Int>, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 11153, max : 11154 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 11046, max : 11047 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstFloatArrayExpr<T>(self:TypedMetas<Array<haxe.macro.Expr>, T>, values:Array<Float>, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 11489, max : 11490 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 11382, max : 11383 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
 	}
 	@:op(a())
 	static function buildwithConstBoolArrayExpr<T>(self:TypedMetas<Array<haxe.macro.Expr>, T>, values:Array<Bool>, ?pos:haxe.macro.Expr.Position):haxe.macro.Expr.MetadataEntry {
-		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 11823, max : 11824 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
+		return { name : self.asString(), params : values.map(c -> (haxe.macro.Context.makeExpr(c, haxe.macro.Context.makePosition({ file : "build/Entry.hx", min : 11716, max : 11717 })) : haxe.macro.Expr)), pos : pos ?? Context.currentPos() };
 	}
 	@:to
 	public inline function asString():String return this;
@@ -57,12 +57,6 @@ package haxe.macro;
 		Platform: cpp
 	**/
 	public var Abi : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Abi;
-	/**
-		`@:abstract`
-		Sets the underlying class implementation as `abstract`.
-		Platform: java | cs
-	**/
-	public var Abstract : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Abstract;
 	/**
 		`@:access`
 		Forces private access to package, type or field.
@@ -92,11 +86,12 @@ package haxe.macro;
 	public var Analyzer : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Analyzer;
 	/**
 		`@:annotation`
-		Annotation (`@interface`) definitions on `--java-lib` imports will be annotated with this metadata. Has no effect on types compiled by Haxe.
-		Platform: java
+		Marks a class as a Java annotation
+		Platform: jvm
 		Applies to: Class
+		@param arg Retention policy
 	**/
-	public var Annotation : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.Annotation;
+	public var Annotation : haxe.macro.TypedMetas<haxe.macro.Expr, haxe.macro.Type.ClassType> = haxe.macro.Metas.Annotation;
 	/**
 		`@:arrayAccess`
 		Allows array access on an abstract.
@@ -104,20 +99,6 @@ package haxe.macro;
 		@see https://haxe.org/manual/types-abstract-array-access.html
 	**/
 	public var ArrayAccess : haxe.macro.TypedMetas<Void, { var meta : haxe.macro.Type.MetaAccess; }> = haxe.macro.Metas.ArrayAccess;
-	/**
-		`@:cs.assemblyMeta`
-		Used to declare a native C# assembly attribute
-		Platform: cs
-		Applies to: Class
-	**/
-	public var AssemblyMeta : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.AssemblyMeta;
-	/**
-		`@:cs.assemblyStrict`
-		Used to declare a native C# assembly attribute; is type checked
-		Platform: cs
-		Applies to: Class
-	**/
-	public var AssemblyStrict : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.AssemblyStrict;
 	/**
 		`@:ast`
 		Internally used to pass the AST source into the typed AST.
@@ -155,13 +136,6 @@ package haxe.macro;
 	**/
 	public var Bitmap : haxe.macro.TypedMetas<haxe.macro.Expr, haxe.macro.Type.ClassType> = haxe.macro.Metas.Bitmap;
 	/**
-		`@:bridgeProperties`
-		Creates native property bridges for all Haxe properties in this class.
-		Platform: cs
-		Applies to: Class
-	**/
-	public var BridgeProperties : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.BridgeProperties;
-	/**
 		`@:build`
 		Builds a class, enum, or abstract from a macro.
 		Applies to: Class | Enum | Abstract
@@ -188,21 +162,6 @@ package haxe.macro;
 		Applies to: Abstract
 	**/
 	public var Callable : haxe.macro.TypedMetas<Void, haxe.macro.Type.AbstractType> = haxe.macro.Metas.Callable;
-	/**
-		`@:class`
-		Used internally to annotate an enum that will be generated as a class.
-		For internal compiler use only.
-		Platform: java | cs
-		Applies to: Enum
-	**/
-	public var Class : haxe.macro.TypedMetas<Void, haxe.macro.Type.EnumType> = haxe.macro.Metas.Class;
-	/**
-		`@:classCode`
-		Used to inject platform-native code into a class.
-		Platform: java | cs
-		Applies to: Class
-	**/
-	public var ClassCode : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.ClassCode;
 	/**
 		`@:commutative`
 		Declares an abstract operator as commutative.
@@ -253,21 +212,6 @@ package haxe.macro;
 	**/
 	public var CppNamespaceCode : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.CppNamespaceCode;
 	/**
-		`@:csNative`
-		Automatically added by `--net-lib` on classes generated from .NET DLL files.
-		For internal compiler use only.
-		Platform: cs
-		Applies to: Class | Enum
-	**/
-	public var CsNative : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.CsNative;
-	/**
-		`@:cs.using`
-		Add using directives to your module
-		Platform: cs
-		Applies to: Class
-	**/
-	public var CsUsing : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.CsUsing;
-	/**
 		`@:dce`
 		Forces dead code elimination even when `--dce full` is not specified.
 		Applies to: Class | Enum
@@ -294,13 +238,6 @@ package haxe.macro;
 	**/
 	public var DefParam : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.DefParam;
 	/**
-		`@:delegate`
-		Automatically added by `--net-lib` on delegates.
-		Platform: cs
-		Applies to: Abstract
-	**/
-	public var Delegate : haxe.macro.TypedMetas<Void, haxe.macro.Type.AbstractType> = haxe.macro.Metas.Delegate;
-	/**
 		`@:depend`
 		Platform: cpp
 	**/
@@ -323,14 +260,6 @@ package haxe.macro;
 	**/
 	public var DisplayOverride : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.DisplayOverride;
 	/**
-		`@:dynamicObject`
-		Used internally to identify the Dynamic Object implementation.
-		For internal compiler use only.
-		Platform: java | cs
-		Applies to: Class
-	**/
-	public var DynamicObject : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.DynamicObject;
-	/**
 		`@:eager`
 		Forces typedefs to be followed early.
 		Applies to: Typedef
@@ -343,20 +272,6 @@ package haxe.macro;
 		@see https://haxe.org/manual/types-abstract-enum.html
 	**/
 	public var Enum : haxe.macro.TypedMetas<Void, haxe.macro.Type.AbstractType> = haxe.macro.Metas.Enum;
-	/**
-		`@:enumConstructorParam`
-		Used internally to annotate GADT type parameters.
-		For internal compiler use only.
-		Applies to: Class
-	**/
-	public var EnumConstructorParam : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.EnumConstructorParam;
-	/**
-		`@:event`
-		Automatically added by `--net-lib` on events. Has no effect on types compiled by Haxe.
-		Platform: cs
-		Applies to: ClassField
-	**/
-	public var Event : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.Event;
 	/**
 		`@:exhaustive`
 		Used internally to mark that a switch is exhaustive.
@@ -471,9 +386,15 @@ package haxe.macro;
 	**/
 	public var From : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.From;
 	/**
+		`@:functionalInterface`
+		Mark an interface as a functional interface
+		Platform: jvm
+	**/
+	public var FunctionalInterface : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.FunctionalInterface;
+	/**
 		`@:functionCode`
 		Used to inject platform-native code into a function.
-		Platform: cpp | java | cs
+		Platform: cpp
 	**/
 	public var FunctionCode : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.FunctionCode;
 	/**
@@ -527,14 +448,6 @@ package haxe.macro;
 	**/
 	public var HasUntyped : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.HasUntyped;
 	/**
-		`@:haxeGeneric`
-		Used internally to annotate non-native generic classes.
-		For internal compiler use only.
-		Platform: cs
-		Applies to: Class | Enum
-	**/
-	public var HaxeGeneric : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.HaxeGeneric;
-	/**
 		`@:headerClassCode`
 		Code to be injected into the generated class, in the header.
 		Platform: cpp
@@ -565,6 +478,12 @@ package haxe.macro;
 	**/
 	public var HlNative : haxe.macro.TypedMetas<Void, { var meta : haxe.macro.Type.MetaAccess; }> = haxe.macro.Metas.HlNative;
 	/**
+		`@:hxb.id`
+		Internally used by hxb
+		For internal compiler use only.
+	**/
+	public var HxbId : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.HxbId;
+	/**
 		`@:hx.completion`
 		Internally used for completion
 		For internal compiler use only.
@@ -573,7 +492,6 @@ package haxe.macro;
 	/**
 		`@:hxGen`
 		Annotates that an extern class was generated by Haxe.
-		Platform: java | cs
 		Applies to: Class | Enum
 	**/
 	public var HxGen : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.HxGen;
@@ -614,7 +532,7 @@ package haxe.macro;
 	/**
 		`@:inheritDoc`
 		Append documentation from a parent field or class (if used without an argument) or from a specified class or field (if used like @:inheritDoc(pack.Some.field)).
-		Applies to: Class | Class | Enum | Abstract | AnyField
+		Applies to: Class | Enum | Abstract | AnyField
 	**/
 	public var InheritDoc : haxe.macro.TypedMetas<Void, { var meta : haxe.macro.Type.MetaAccess; }> = haxe.macro.Metas.InheritDoc;
 	/**
@@ -643,13 +561,6 @@ package haxe.macro;
 	**/
 	public var InlineObject : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.InlineObject;
 	/**
-		`@:internal`
-		Generates the annotated field/class with 'internal' access.
-		Platform: java | cs
-		Applies to: Class | Enum | ClassField
-	**/
-	public var Internal : haxe.macro.TypedMetas<Void, { var meta : haxe.macro.Type.MetaAccess; }> = haxe.macro.Metas.Internal;
-	/**
 		`@:isVar`
 		Forces a physical field to be generated for properties that otherwise would not require one.
 		Applies to: ClassField
@@ -657,34 +568,16 @@ package haxe.macro;
 	**/
 	public var IsVar : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.IsVar;
 	/**
-		`@:javaCanonical`
-		Used by the Java target to annotate the canonical path of the type.
-		Platform: java
-		Applies to: Class | Enum
-		@param arg0 Output type package
-		@param arg1 Output type name
-	**/
-	public var JavaCanonical : haxe.macro.TypedMetas<Array<haxe.macro.Expr>, haxe.macro.Type.BaseType> = haxe.macro.Metas.JavaCanonical;
-	/**
 		`@:java.default`
 		Equivalent to the default modifier of the Java language
-		Platform: java
+		Platform: jvm
 		Applies to: ClassField
-		@param arg null
 	**/
-	public var JavaDefault : haxe.macro.TypedMetas<haxe.macro.Expr, haxe.macro.Type.ClassField> = haxe.macro.Metas.JavaDefault;
-	/**
-		`@:javaNative`
-		Automatically added by `--java-lib` on classes generated from JAR/class files.
-		For internal compiler use only.
-		Platform: java
-		Applies to: Class | Enum
-	**/
-	public var JavaNative : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.JavaNative;
+	public var JavaDefault : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.JavaDefault;
 	/**
 		`@:jvm.synthetic`
 		Mark generated class, field or method as synthetic
-		Platform: java
+		Platform: jvm
 		Applies to: Class | Enum | AnyField
 	**/
 	public var JvmSynthetic : haxe.macro.TypedMetas<Void, { var meta : haxe.macro.Type.MetaAccess; }> = haxe.macro.Metas.JvmSynthetic;
@@ -733,7 +626,7 @@ package haxe.macro;
 		`@:libType`
 		Used by `--net-lib` and `--java-lib` to mark a class that should not be checked (overrides, interfaces, etc) by the type loader.
 		For internal compiler use only.
-		Platform: java | cs
+		Platform: jvm
 		Applies to: Class
 	**/
 	public var LibType : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.LibType;
@@ -760,12 +653,6 @@ package haxe.macro;
 		(deprecated)
 	**/
 	public var Macro : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Macro;
-	/**
-		`@:maybeUsed`
-		Internally used by DCE to mark fields that might be kept.
-		For internal compiler use only.
-	**/
-	public var MaybeUsed : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.MaybeUsed;
 	/**
 		`@:mergeBlock`
 		Merge the annotated block into the current scope.
@@ -798,32 +685,17 @@ package haxe.macro;
 	/**
 		`@:java.native`
 		Annotates that a function has implementation in native code through JNI.
-		Platform: java
+		Platform: jvm
 		Applies to: ClassField
 	**/
 	public var NativeJni : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.NativeJni;
 	/**
-		`@:nativeChildren`
-		Annotates that all children from a type should be treated as if it were an extern definition - platform native.
-		Platform: java | cs
-		Applies to: Class
-	**/
-	public var NativeChildren : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.NativeChildren;
-	/**
 		`@:nativeGen`
 		Annotates that a type should be treated as if it were an extern definition - platform native.
-		Platform: java | cs | python
+		Platform: python
 		Applies to: Class | Enum
 	**/
 	public var NativeGen : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.NativeGen;
-	/**
-		`@:nativeGeneric`
-		Used internally to annotate native generic classes.
-		For internal compiler use only.
-		Platform: cs
-		Applies to: Class | Enum
-	**/
-	public var NativeGeneric : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.NativeGeneric;
 	/**
 		`@:nativeProperty`
 		Use native properties which will execute even with dynamic usage.
@@ -1027,7 +899,7 @@ package haxe.macro;
 	/**
 		`@:private`
 		Marks a class field as being private.
-		Platform: cs
+		Platform: jvm
 		Applies to: ClassField
 	**/
 	public var Private : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.Private;
@@ -1040,30 +912,16 @@ package haxe.macro;
 	/**
 		`@:protected`
 		Marks a class field as being protected.
-		Platform: cs | java | flash
+		Platform: jvm | flash
 		Applies to: ClassField
 	**/
 	public var Protected : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.Protected;
-	/**
-		`@:property`
-		Marks a field to be compiled as a native C# property.
-		Platform: cs
-		Applies to: ClassField
-	**/
-	public var Property : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.Property;
 	/**
 		`@:pure`
 		Marks a class field, class or expression as pure (side-effect free).
 		Applies to: Class | ClassField | Expr
 	**/
 	public var Pure : haxe.macro.TypedMetas<Void, Any> = haxe.macro.Metas.Pure;
-	/**
-		`@:readOnly`
-		Generates a field with the `readonly` native keyword.
-		Platform: cs
-		Applies to: ClassField
-	**/
-	public var ReadOnly : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.ReadOnly;
 	/**
 		`@:realPath`
 		Internally used on `@:native` types to retain original path information.
@@ -1139,21 +997,6 @@ package haxe.macro;
 	**/
 	public var Setter : haxe.macro.TypedMetas<haxe.macro.Expr, haxe.macro.Type.ClassField> = haxe.macro.Metas.Setter;
 	/**
-		`@:skipCtor`
-		Used internally to generate a constructor as if it were a native type (no `__hx_ctor`).
-		For internal compiler use only.
-		Platform: java | cs
-	**/
-	public var SkipCtor : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.SkipCtor;
-	/**
-		`@:skipReflection`
-		Used internally to annotate a field that shouldn't have its reflection data generated.
-		For internal compiler use only.
-		Platform: java | cs
-		Applies to: ClassField
-	**/
-	public var SkipReflection : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.SkipReflection;
-	/**
 		`@:sound`
 		Includes a given .wav or .mp3 file into the target SWF and associates it with the class (must extend `flash.media.Sound`).
 		Platform: flash
@@ -1188,14 +1031,14 @@ package haxe.macro;
 	public var StoredTypedExpr : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.StoredTypedExpr;
 	/**
 		`@:strict`
-		Used to declare a native C# attribute or a native Java metadata; is type checked.
-		Platform: java | cs
+		Used to declare a native Java metadata; is type checked.
+		Platform: jvm
 	**/
 	public var Strict : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Strict;
 	/**
 		`@:struct`
 		Marks a class definition as a struct.
-		Platform: cs | hl
+		Platform: hl
 		Applies to: Class
 	**/
 	public var Struct : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.Struct;
@@ -1213,13 +1056,6 @@ package haxe.macro;
 	**/
 	public var StructInit : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.StructInit;
 	/**
-		`@:suppressWarnings`
-		Adds a `SuppressWarnings` annotation for the generated Java class.
-		Platform: java
-		Applies to: Class
-	**/
-	public var SuppressWarnings : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassType> = haxe.macro.Metas.SuppressWarnings;
-	/**
 		`@:tailRecursion`
 		Internally used for tail recursion elimination.
 		For internal compiler use only.
@@ -1232,14 +1068,6 @@ package haxe.macro;
 		Applies to: ClassField
 	**/
 	public var TemplatedCall : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.TemplatedCall;
-	/**
-		`@:throws`
-		Adds a `throws` declaration to the generated function.
-		Platform: java
-		Applies to: ClassField
-		@param arg Type as String
-	**/
-	public var Throws : haxe.macro.TypedMetas<haxe.macro.Expr, haxe.macro.Type.ClassField> = haxe.macro.Metas.Throws;
 	/**
 		`@:this`
 		Internally used to pass a `this` expression to macros.
@@ -1261,13 +1089,6 @@ package haxe.macro;
 	**/
 	public var ToString : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.ToString;
 	/**
-		`@:transient`
-		Adds the `transient` flag to the class field.
-		Platform: java
-		Applies to: ClassField
-	**/
-	public var Transient : haxe.macro.TypedMetas<Void, haxe.macro.Type.ClassField> = haxe.macro.Metas.Transient;
-	/**
 		`@:transitive`
 		Allows transitive casts with an abstract.
 		Applies to: Abstract
@@ -1281,7 +1102,7 @@ package haxe.macro;
 	public var ValueUsed : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.ValueUsed;
 	/**
 		`@:volatile`
-		Platform: java | cs
+		Platform: jvm
 	**/
 	public var Volatile : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Volatile;
 	/**
@@ -1295,13 +1116,6 @@ package haxe.macro;
 		Platform: cpp
 	**/
 	public var Unreflective : haxe.macro.TypedMetas<Void, haxe.macro.Type.BaseType> = haxe.macro.Metas.Unreflective;
-	/**
-		`@:unsafe`
-		Declares a class, or a method with the C#'s `unsafe` flag.
-		Platform: cs
-		Applies to: Class | ClassField
-	**/
-	public var Unsafe : haxe.macro.TypedMetas<Void, { var meta : haxe.macro.Type.MetaAccess; }> = haxe.macro.Metas.Unsafe;
 	/**
 		`@:used`
 		Internally used by DCE to mark a class or field as used.
